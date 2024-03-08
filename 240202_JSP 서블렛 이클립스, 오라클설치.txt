@@ -1,0 +1,29 @@
+JSP 교안
+
+27p~
+4. 서블릿 
+
+get - 
+post - 회원가입
+
+put 전체수정
+trace 일부수정
+
+
+java Resource - Library - server runtime~~ 
+servlet-api.jar (프로토콜 국한되지 않은 패키지
+javax.servlet - http에 맞춰서 구현
+
+
+
+project 우클릭 - properties - java build path - library - 
+
+
+서버가 오류 낫거나
+주소가 
+
+1521
+2030
+
+
+http port 8090 

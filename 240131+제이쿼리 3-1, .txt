@@ -1,0 +1,74 @@
+jQuery :  jQuery  이벤트 객체는  동일한  사용방법과  동일한  이름의 
+속성을 갖는다.
+
+docment ready함수
+
+
+
+<on>+ load 
+abc.load~~
+요소 == tag라고 생각해도 됨
+
+240131 수요일
+오전
+jQuery
+3-1. mouseenter, mouseleave
+3-2. if($(this).is("img:eq(0)")){ }
+3-3. 이벤트 위임
+3-4. 이벤트 stopPropagation, preventDefault 이벤트 
+**** 여기부터 study 파일로로진행--
+3-5. 체크박스 다루기
+4-1. show,fadein 효과
+4-2. 모달창
+4-3. 애니메이션 효과
+------------------------------
+오후
+프로젝트 일정설명
+웹프로그래밍 기초 설명: (교안 설명. myBox에서 새로 다운받으면 생기는파일)
+eclipse 설치 (JSP교안 1~9p 따라하면 됨)
+tomcat9.0.85 설치
+
+
+Servlet안에 JSP
+JSP는 화면을만드느 view기술
+JSP도 서블릿임.서블릿화해서 동작하는것임.
+서블렛 발전한 것이 스프링.
+
+스프링은 자바 기반이
+
+
+
+package com.jspstudy.ch02.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Calendar;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+//서블릿은 HttpServlet을 상속받아야함(상속받았으니 오버라이딩 하면됨)
+@WebServlet("/today; charset=utf-8") // today로 요청할 때 호출해라. 서블릿은 contextRoot로 JSPClassCh02/today가 될것임
+public class TodayServlet extends HttpServlet {
+	@Override
+	public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+		Calendar today = Calendar.getInstance();
+		System.out.println(today.get(Calendar.YEAR));
+		
+		res.setContentType("text/html;charset=utf-8");
+
+		// 웹브라우저-웹서버 사이에서 요청에 대한 stream이 만들어지고 통로를 만들어준다.
+		PrintWriter out = res.getWriter(); // printWriter 타입을 반환해준다
+		out.println("<html>");
+		out.println("<head><title>오늘의 날짜</title></head>");
+		out.println("<body>");
+		out.println("오늘은" + today.get(Calendar.YEAR) + "년");
+		out.println(+(today.get(Calendar.MONTH) + 1) + "월");
+		out.println(+today.get(Calendar.DAY_OF_MONTH) + "일");
+		out.println("</body>");
+		out.println("</html>");
+
+	}
+}

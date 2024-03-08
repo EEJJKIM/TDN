@@ -1,0 +1,59 @@
+2024.02.01. 
+
+자바는클래스, 이름들 대문자로 시작해서 단어 바뀔때 JavaScriptFile
+
+자바의 모든 클래스는 간접적으로 상속받는다.
+오브젝트-JRE System Library
+
+Java Resource-src/main/java에 패키지 만든다.
+자바 패키지 이름: com.jspstudy.ch03.classes
+
+
+
+** 오버라이딩: 메소드 재정의. 리모델링.
+>>> 부모한테 상속받은 메서드를 자식이 필요해서 
+다시 리모델링해서 쓰는것
+
+자바의 기본 패키지
+
+.jar 확장자
+.war 확장자
+
+JRE System Library - java.base - java.lang에 있는 String / java.util에 있는 Calendar
+
+* 오류
+403오류: 접근하지 말아야 할 곳에 접근했을때
+404오류: 없는 곳에 접근했을때? 주소 다시 봐야함
+500오류: 서버문제
+
+* JSP를
+서블릿화 시켜 내부에 (서블릿을 갖고 있어서)
+웹컨테이너/서블릿컨테이너 라고 함
+
+* tomcat WAS (웹앱서버)
+
+
+* http는? 비연결 지향형. 데이터 요청-응답 후 끝. 계속 연결상태가 아님.
+
+* tomcat은 자바 기준을 만들어짐.
+
+* 화면에 출력하기ㅏ위해 
+
+지시자 ex)
+<%@ page %>
+<%@ taglib %>
+<%@ include %>
+
+
+ClassesTest.java (package
+
+scripting01.jsp
+pageDirective01.jsp
+includeDirective.jsp
+includeMenu.jsp
+
+
+M
+View
+Controller
+Java Resource = src/main/java- com.jspstudy.ch93.vo 패키지 만들고 그안에 student.java
